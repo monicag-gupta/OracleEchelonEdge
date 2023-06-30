@@ -1,0 +1,18 @@
+sqlplus
+SQL>  sys as sysdba
+SQL> shutdown immediate
+SQL> startup open
+SQL> alter session set "_ORACLE_SCRIPT"=true;
+SQL> CREATE USER hello IDENTIFIED BY hello DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+SQL> GRANT CREATE SESSION, CONNECT, RESOURCE TO hello;
+SQL> CONNECT hello/hello;
+SQL> CREATE TABLE hello_world (msg VARCHAR2(50));
+SQL> quit
+
+
+sqlplus
+SQL> sys as sysdba
+SQL> alter session set "_ORACLE_SCRIPT"=true;
+SQL> CREATE USER hr IDENTIFIED BY hr DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+SQL> GRANT CREATE SESSION, CONNECT, RESOURCE TO hr;
+SQL> quit
