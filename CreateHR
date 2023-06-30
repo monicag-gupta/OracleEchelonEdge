@@ -16,3 +16,16 @@ SQL> alter session set "_ORACLE_SCRIPT"=true;
 SQL> CREATE USER hr IDENTIFIED BY hr DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 SQL> GRANT CREATE SESSION, CONNECT, RESOURCE TO hr;
 SQL> quit
+
+
+
+Open SQL Developer
+Get connected with hr
+password: hr
+SID : xe or ORCL
+
+
+copy all the contents of HR_DB.txt in the query window.
+Then select all the query -> execute
+
+The HR Database will be ready
